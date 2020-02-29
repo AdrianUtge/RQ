@@ -6,3 +6,8 @@
 
 /Panneau-s
 |-> Server Side
+
+## Task-List 
+- [x] Main Display
+- [ ] Admin Panel
+- [ ] API
