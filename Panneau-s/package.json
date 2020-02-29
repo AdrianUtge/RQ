@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "nedb": "^1.8.0"
+    "mongodb": "^3.5.4"
   }
 }

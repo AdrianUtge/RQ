@@ -2,7 +2,7 @@
 // Exemple de menu qui sera plus tard directement fait depuis le panneau d'administartion
 let menu =
 {
-    "lundi": { "entre": "Fromage", "plat": "Pates", "dessert": "Mousse au chocolat", },
+    "lundi": { "entre": "Fromage", "plat": "Vichysoise", "dessert": "Mousse au chocolat", },
     "mardi": { "entre": "Salade", "plat": "Fondue", "dessert": "Gateau au chocolat", },
     "jeudi": { "entre": "Pate de campage", "plat": "Quiche lorraine", "dessert": "mousse au chocolat", },
     "vendredi": { "entre": "Taboule", "plat": "Steak tartare", "dessert": "mousse au chocolat", },
