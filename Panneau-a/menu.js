@@ -7,8 +7,6 @@ document.getElementById("Vendredi").addEventListener("click", Vendredi);
 
 
 
-
-
 function Lundi() {
     let lundientre = document.getElementById("lundi.entre").value
     let lundiplat = document.getElementById("lundi.plat").value
@@ -19,11 +17,19 @@ function Lundi() {
     const JsonLundidessert = JSON.stringify(lundidessert)
 
     const MenuLundi = [JsonLundientre + JsonLundiplat + JsonLundidessert];
+    console.log(MenuLundi)
+    fetch(`http://localhost:3000/api`, {
+        method: 'post',
+        body: JSON.stringify(MenuLundi)
+    })
+        .then(function (response) {
+            return response.json()
+        })
+        .then(function (data) {
+            console.log('post request response data', data)
+        })
 
-
-    // post to node server
-}
-
+};
 
 function Mardi() {
     let mardientre = document.getElementById("mardi.entre").value
@@ -38,7 +44,7 @@ function Mardi() {
 
 
     // post to node server
-}
+};
 
 
 function Jeudi() {
@@ -54,7 +60,7 @@ function Jeudi() {
 
 
     // post to node server
-}
+};
 
 
 function Jeudi() {
@@ -70,7 +76,7 @@ function Jeudi() {
 
 
     // post to node server
-}
+};
 
 
 function Vendredi() {
@@ -86,4 +92,4 @@ function Vendredi() {
 
 
     // post to node server
-}
+};
