@@ -11,9 +11,7 @@
 ### On mac os 
 ```
 $ cd /your_path/RQ/SERVER
-<br>
 $ npm install 
-<br>
 $ npm start
 ```
 
