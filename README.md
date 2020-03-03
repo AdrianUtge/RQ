@@ -26,7 +26,6 @@ Liste des fonctionnalités prêtes et des TODOs pour celles en  développement
 
 To-do list:
 * BACK-END Panneau d'administation
-* Wow improvement to be done 2
 
 ## Status
 WIP
