@@ -1,12 +1,13 @@
-var express = require('express');
-var router = express.Router();
+// Main router entry point, sets up all route modules
+const express = require('express');
+const router = express.Router();
 
-let landing = require('../controllers/landing')
+const admin = require('./admin');
+const main = require('./main')
 
-router.get('/', landing.get_landing);
-router.post('/', landing.submit_lead)
+router.get('/admin', admin);
+router.get('/', main);
+
 
 
 module.exports = router;
-
-
