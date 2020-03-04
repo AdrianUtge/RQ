@@ -1,6 +1,5 @@
 
 ## Table des matières
-* [General info](#general-info)
 * [Setup](#setup)
 * [Features](#features)
 * [Status](#status)
@@ -9,9 +8,11 @@
 
 ## Setup
 ### On mac os 
+```
 $ cd /your_path/RQ/SERVER
 $ npm install 
 $ npm start
+```
 
 
 ## Features
@@ -22,7 +23,6 @@ Liste des fonctionnalités prêtes et des TODOs pour celles en  développement
 
 To-do list:
 * BACK-END Panneau d'administation
-* Wow improvement to be done 2
 
 ## Status
 WIP
