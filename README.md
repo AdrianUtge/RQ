@@ -1,6 +1,5 @@
 
 ## Table des matières
-* [General info](#general-info)
 * [Setup](#setup)
 * [Features](#features)
 * [Status](#status)
