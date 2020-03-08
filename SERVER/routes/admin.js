@@ -6,7 +6,7 @@ let admin = require('../controllers/admin')
 /* GET home page. */
 router.get('/admin', admin_);
 function admin_(req, res) {
-    res.send("oks")
+    res.render('admin')
 }
 
 module.exports = router;

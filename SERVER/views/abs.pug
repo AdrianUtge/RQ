@@ -1,0 +1,50 @@
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Document
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css', integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh', crossorigin='anonymous')
+    style.
+      .valider {
+      background-color: #7BE1AE;
+      color: white;
+      }
+      .annuler {
+      background-color: #FF4040;
+      color: white;
+      }
+  body
+    br
+    .container.text-center
+      h1 Presence
+    .container
+      table.table.table-striped.table-bordered(name='dtBasicExample', cellspacing='0', wnameth='100%')
+        thead
+          tr
+            th.th-sm
+              | Nom
+            th.th-sm
+              | Prenom
+            th.th-sm
+              | Absence
+        tbody
+          form(action='/', ,='', method='POST')
+          tr
+            td Nishat
+            td Chang
+            td
+              input(type='checkbox')
+          tr
+            td Blessing
+            td Berger
+            td
+              input(type='checkbox')
+          tr
+            td Beasley
+            td Miya 
+            td
+              input(type='checkbox')
+    br
+    .d-flex.justify-content-around
+      button.btn.valider  Confirmer
+      button.btn.annuler  Annuler

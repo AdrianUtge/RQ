@@ -1,0 +1,81 @@
+html(lang='fr')
+  head
+    meta(charset='UTF-8')
+    title Document
+    script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js', integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n', crossorigin='anonymous')
+    script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js', integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo', crossorigin='anonymous')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js', integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6', crossorigin='anonymous')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css', integrity='sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh', crossorigin='anonymous')
+    style.
+      table,
+      td {
+      border: 1px solid black;
+      }
+      .footer {
+      width: 100%;
+      background-color: #262626;
+      color: #909090;
+      text-align: center;
+      position: fixed;
+      bottom: 0px;
+      width: 100%;
+      }
+  body
+    main(role='main')
+      br
+      section.text-center
+        .container
+          h1 Professeurs Absents
+          .table-responsive
+            table.table.table-striped.table-sm
+          br
+      br
+      section
+        .container
+          h1.text-center  Menu Cantine 
+          br
+          .card-deck
+            .card(style='width: 18rem;')
+              .card-header
+                | Lundi
+              ul.list-group.list-group-flush
+                li#LundiEntre.list-group-item
+                li#LundiPlat.list-group-item
+                li#LundiDessert.list-group-item
+            .card(style='width: 18rem;')
+              .card-header
+                | Mardi
+              ul.list-group.list-group-flush
+                li#MardiEntre.list-group-item
+                li#MardiPlat.list-group-item
+                li#MardiDessert.list-group-item
+          br
+          .card-deck
+            .card(style='width: 18rem;')
+              .card-header
+                | Jeudi
+              ul.list-group.list-group-flush
+                li#JeudiEntre.list-group-item
+                li#JeudiPlat.list-group-item
+                li#JeudiDessert.list-group-item
+            .card(style='width: 18rem;')
+              .card-header
+                | Vendredi
+              ul.list-group.list-group-flush
+                li#VendrediEntre.list-group-item
+                li#VendrediPlat.list-group-item
+                li#VendrediDessert.list-group-item
+    br
+    // Footer
+    footer.footer.footer-dark
+      // Copyright
+      .footer-copyright.text-center.py-3
+        | © 2020 Copyright:
+        a  Adrian Utge Le Gall 
+        p Made with 🧡 by Adrian Utge
+      // Copyright
+      // Footer
+      script(src='https://code.jquery.com/jquery-3.4.1.slim.min.js', integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n', crossorigin='anonymous')
+      script.
+        window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\\/script>')
+      script(src='./index.js')
