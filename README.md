@@ -21,8 +21,7 @@ Liste des fonctionnalités prêtes et des TODOs pour celles en  développement
 * FRONT-END Panneau d'administration
 
 
-To-do list:
-* BACK-END Panneau d'administation
+TODO > Trello
 
 ## Status
 WIP
