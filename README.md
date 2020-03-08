@@ -28,4 +28,4 @@ WIP
 
 
 ## Contact
-Created by [@AdrianUtge] - N'hésitez pas à me contacter!
+[@AdrianUtge] - N'hésitez pas à me contacter!
