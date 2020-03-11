@@ -16,7 +16,7 @@ $ npm install
 $ npm start
 ```
 ## About
-<a href="./">asd</a>
+<a href="https://darksky.net/poweredby/">Powered by Dark Sky</a>
 
 ## Features
 Liste des fonctionnalités prêtes et des TODOs pour celles en  développement
