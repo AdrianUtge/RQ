@@ -4,6 +4,8 @@
 * [Features](#features)
 * [Status](#status)
 * [Contact](#contact)
+* [About](#about)
+
 
 
 ## Setup
@@ -13,7 +15,8 @@ $ cd /your_path/RQ/SERVER
 $ npm install 
 $ npm start
 ```
-
+## About
+<a href="./">asd</a>
 
 ## Features
 Liste des fonctionnalités prêtes et des TODOs pour celles en  développement
