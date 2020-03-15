@@ -11,8 +11,17 @@ let menu =
     "jeudi": { "entre": "Pate de campage", "plat": "Quiche lorraine", "dessert": "mousse au chocolat", },
     "vendredi": { "entre": "Taboule", "plat": "Steak tartare", "dessert": "mousse au chocolat", },
 }
-// Heure
+// Profs Abs
 
+let presence =
+
+    [
+        { "name": "A.Utge", "presence": false, },
+        { "name": "C.Utge", "presence": true, },
+        { "name": "S.Utge", "presence": true },
+        { "name": "M.Zizi", "presence": false },
+
+    ]
 
 
 // var dateWithouthSecond = new Date();
@@ -91,7 +100,69 @@ remplace("VendrediDessert", menu.vendredi.dessert);
 
 
 
-// Prof ABS
 
-// etat fourni depuis db > /Paneau-S
+// Ajout de liste
+function AddAbsence(data) {
+    var x = document.createElement("LI");
+    var t = document.createTextNode(data);
+    x.appendChild(t);
+    document.getElementById("presence").appendChild(x);
+}
 
+
+
+const arr = [{
+    name: '',
+    presence: 'false',
+},
+{
+    name: '',
+    presence: 'true',
+},
+];
+
+
+const items = arr.filter(item => item.presence.indexOf('false') !== -1);
+
+
+let id = 0
+
+while (id < items.length) {
+    let abs = (items[id].name);
+    AddAbsence(abs);
+    console.log(abs)
+    id++;
+}
+
+
+
+// const arr = [{
+//     name: 'string 1',
+//     arrayWithvalue: '1,2',
+//     other: 'that',
+// },
+// {
+//     name: 'string 2',
+//     arrayWithvalue: '2',
+//     other: 'that',
+// },
+// {
+//     name: 'string 2',
+//     arrayWithvalue: '2,3',
+//     other: 'that',
+// },
+// {
+//     name: 'string 2',
+//     arrayWithvalue: '4,5',
+//     other: 'that',
+// },
+// {
+//     name: 'string 2',
+//     arrayWithvalue: '4',
+//     other: 'that',
+// },
+// ];
+
+// const items = arr.filter(item => item.arrayWithvalue.indexOf('4') !== -1);
+
+// console.log(items);
