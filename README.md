@@ -4,6 +4,8 @@
 * [Features](#features)
 * [Status](#status)
 * [Contact](#contact)
+* [About](#about)
+
 
 
 ## Setup
@@ -13,7 +15,8 @@ $ cd /your_path/RQ/SERVER
 $ npm install 
 $ npm start
 ```
-
+## About
+<a href="https://darksky.net/poweredby/">Powered by Dark Sky</a>
 
 ## Features
 Liste des fonctionnalités prêtes et des TODOs pour celles en  développement
@@ -28,4 +31,4 @@ WIP
 
 
 ## Contact
-Created by [@AdrianUtge] - N'hésitez pas à me contacter!
+[@AdrianUtge] - N'hésitez pas à me contacter!
