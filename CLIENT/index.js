@@ -1,5 +1,9 @@
+//Importation des libraires 
+
+
 // Cantine
 // Exemple de menu qui sera plus tard directement fait depuis le panneau d'administartion
+conteur = 0;
 let menu =
 {
     "lundi": { "entre": "Fromage", "plat": "Vichysoise", "dessert": "Mousse au chocolat", },
@@ -7,6 +11,35 @@ let menu =
     "jeudi": { "entre": "Pate de campage", "plat": "Quiche lorraine", "dessert": "mousse au chocolat", },
     "vendredi": { "entre": "Taboule", "plat": "Steak tartare", "dessert": "mousse au chocolat", },
 }
+// Heure
+
+
+
+// var dateWithouthSecond = new Date();
+// dateWithouthSecond.toLocaleTimeString(navigator.language, { hour: '2-digit', minute: '2-digit' });
+
+// document.getElementById("heure").innerHTML = dateWithouthSecond.toLocaleTimeString(dateWithouthSecond);
+
+fetch('https://api.openweathermap.org/data/2.5/weather?q=Paris,France&units=metric&appid=6ceafa85f3d1d143c3b210ba885bfbe9')
+    .then(res => res.json())
+    .then(json => document.getElementById("meteo").innerHTML = json.main.temp);
+
+
+
+
+function doDate() {
+    var str = "";
+
+    var days = new Array("Dimanche", "Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samdi");
+    var months = new Array("Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre");
+
+    var now = new Date();
+
+    str += days[now.getDay()] + ", " + now.getDate() + " " + months[now.getMonth()] + " " + now.getFullYear() + " " + now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+    document.getElementById("todaysDate").innerHTML = str;
+}
+
+setInterval(doDate, 1000);
 
 //Lundi
 let entrelundi = menu.lundi.entre;
@@ -62,31 +95,3 @@ remplace("VendrediDessert", menu.vendredi.dessert);
 
 // etat fourni depuis db > /Paneau-S
 
-let prof =
-
-    function generateTableHead(table, data) {
-        let thead = table.createTHead();
-        let row = thead.insertRow();
-        for (let key of data) {
-            let th = document.createElement("th");
-            let text = document.createTextNode(key);
-            th.appendChild(text);
-            row.appendChild(th);
-        }
-    }
-
-function generateTable(table, data) {
-    for (let element of data) {
-        let row = table.insertRow();
-        for (key in element) {
-            let cell = row.insertCell();
-            let text = document.createTextNode(element[key]);
-            cell.appendChild(text);
-        }
-    }
-}
-
-let table = document.querySelector("table");
-let data = Object.keys(prof[0]);
-generateTableHead(table, data);
-generateTable(table, prof);

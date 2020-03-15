@@ -8,5 +8,10 @@ router.get('/admin/menu', menu_);
 function menu_(req, res) {
     res.render('menu')
 }
+router.post('/admin/menu', menuL)
+function menuL(req, res) {
+    res.redirect('/admin/menu');
+}
+
 
 module.exports = router;

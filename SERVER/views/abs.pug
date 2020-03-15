@@ -13,6 +13,7 @@ html(lang='en')
       background-color: #FF4040;
       color: white;
       }
+    
   body
     br
     .container.text-center
@@ -44,6 +45,10 @@ html(lang='en')
             td
               input(type='checkbox')
     br
-    .d-flex.justify-content-around
-      button.btn.valider  Confirmer
-      button.btn.annuler  Annuler
+    .text-center
+      form(action='/survey/submission/test/config', method='post')
+      input(type='submit').btn.valider  
+      input(type='reset').btn.annuler
+
+
+
