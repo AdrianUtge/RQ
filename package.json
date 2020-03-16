@@ -1,0 +1,19 @@
+{
+  "name": "rq",
+  "version": "1.0.0",
+  "description": "* [Setup](#setup) * [Features](#features) * [Status](#status) * [Contact](#contact) * [About](#about)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdrianUtge/RQ.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdrianUtge/RQ/issues"
+  },
+  "homepage": "https://github.com/AdrianUtge/RQ#readme"
+}
