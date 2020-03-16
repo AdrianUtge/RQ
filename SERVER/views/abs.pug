@@ -13,42 +13,38 @@ html(lang='en')
       background-color: #FF4040;
       color: white;
       }
-    
   body
     br
     .container.text-center
       h1 Presence
+    p.text-center Vous devez saisir ici le nom des proffeseurs abesnts
     .container
-      table.table.table-striped.table-bordered(name='dtBasicExample', cellspacing='0', wnameth='100%')
-        thead
-          tr
-            th.th-sm
-              | Nom
-            th.th-sm
-              | Prenom
-            th.th-sm
-              | Absence
-        tbody
-          tr
-            td Nishat
-            td Chang
-            td
-              input(type='checkbox')
-          tr
-            td Blessing
-            td Berger
-            td
-              input(type='checkbox')
-          tr
-            td Beasley
-            td Miya 
-            td
-              input(type='checkbox')
+      input#inputAbs.form-control(type='text', placeholder='Proffeseur')
+    ul#abs
+    //
+      <div class="container ">
+      <table name="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" wnameth="100%">
+      <thead>
+      <tr>
+      <th class="th-sm">Nom
+      </th>
+      <th class="th-sm">Absence
+      </th>
+      </tr>
+      </thead>
+      <tbody>
+      <form action="/" , method="POST">
+      <tr>
+      <td> <input class="form-control" type="text" placeholder="Proffeseur" id="inputAbs">
+      </td>
+      <td><input type="checkbox" id="01"></td>
+      </tr>
+      </form>
+      </tbody>
+      </table>
+      </div>
     br
-    .text-center
-      form(action='/survey/submission/test/config', method='post')
-      input(type='submit').btn.valider  
-      input(type='reset').btn.annuler
-
-
-
+    .d-flex.justify-content-around
+      button.btn.valider(onclick='Confirmer()')  Confirmer
+      button.btn.annuler  Annuler
+    script(src='./prof.js')

@@ -112,11 +112,11 @@ function AddAbsence(data) {
 
 
 const arr = [{
-    name: '',
+    name: 'AD',
     presence: 'false',
 },
 {
-    name: '',
+    name: 'AR',
     presence: 'true',
 },
 ];

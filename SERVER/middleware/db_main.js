@@ -14,19 +14,19 @@ const client = new MongoClient(url);
 
 // Use connect method to connect to the Server
 
-function OI(data) {
+function addData(data) {
     client.connect(function (err) {
         assert.equal(null, err);
         console.log("Connected successfully to server");
 
         const db = client.db(dbName);
-        addData(data)
+        OI(data)
 
         client.close();
     });
 }
 
-function addData(data) {
+function OI(data) {
 
 
     const db = client.db(dbName);
@@ -40,7 +40,7 @@ function addData(data) {
 
 
 module.exports = {
-    OI: OI,
+    addData: addData,
 }
 
 
