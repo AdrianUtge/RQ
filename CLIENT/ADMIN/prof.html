@@ -30,8 +30,24 @@
     <p class="text-center">Vous devez saisir ici le nom des proffeseurs abesnts</p>
 
     <div class="container">
-        <input class="form-control" type="text" placeholder="Proffeseur" id="inputAbs">
+        <form action="http://localhost:3000/presence" method="POST">
 
+
+            <div class="form-group">
+                <label for="ISBN">Nom</label>
+                <div class="row">
+                    <input class="form-control" name="Nom" placeholder="Proffeseur">
+                </div>
+            </div>
+
+            <br>
+            <div class="d-flex justify-content-around ">
+                <button type="submit" class="btn valider" onclick="Confirmer()"> Confirmer</button>
+                <button type="reset" class="btn annuler"> Annuler</button>
+
+            </div>
+
+        </form>
     </div>
 
     <ul id="abs">
@@ -73,12 +89,7 @@
     </div> -->
 
 
-    <br>
-    <div class="d-flex justify-content-around ">
-        <button class="btn valider" onclick="Confirmer()"> Confirmer</button>
-        <button class="btn annuler"> Annuler</button>
 
-    </div>
 
 </body>
 <script src="./prof.js"></script>
