@@ -5,6 +5,7 @@
 * [Status](#status)
 * [Contact](#contact)
 * [About](#about)
+* [More](#more)
 
 
 
@@ -31,3 +32,6 @@ WIP
 
 ## Contact
 [@AdrianUtge] - N'hésitez pas à me contacter!
+
+## More
+<a href="https://www.notion.so/Documentation-4c267ab4b4514fe8b5776f0b1a903b61" > Pour plus d'informations </a>
