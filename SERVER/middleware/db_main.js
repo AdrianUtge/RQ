@@ -1,6 +1,8 @@
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
 const fs = require('fs-extra')
+var moment = require("moment")
+moment.locale('fr');
 
 
 // // Connection URL
@@ -14,18 +16,22 @@ const client = new MongoClient(url);
 
 // Use connect method to connect to the Server
 
+const date = moment().format('L');
 
-
+let id3 = 0
 function OI(data) {
 
 
     const db = client.db(dbName);
-    db.collection('Presence').insertOne(data, function (err, r) {
+    let caca = { data, "jour": date, };
+    console.log(caca);
+    db.collection('Presence').insertOne(caca, function (err, r) {
         assert.equal(null, err);
         assert.equal(1, r.insertedCount);
 
 
     })
+    id3++;
 };
 
 function addData(data) {
@@ -80,7 +86,7 @@ function readDataP() {
             return
         }
         const db = client.db(dbName);
-        db.collection('Presence').find({}, { projection: { _id: 0, Presence: 1, Nom: 1 } }).toArray(function (err, result) {
+        db.collection('Presence').find({}, { projection: { _id: 1, data: 1, jour: date } }).toArray(function (err, result) {
             if (err) throw err;
             console.log(result);
             fs.writeJson('./P.json', result);
@@ -117,12 +123,26 @@ function readDataM() {
 }
 
 
+function RmData(target) {
+    client.connect(function (err) {
+        assert.equal(null, err);
+        console.log("Connected successfully to server");
 
+        const db = client.db(dbName);
+        db.collection('Presence').remove(target)
+
+        readDataP()
+        readDataM()
+
+        client.close();
+    });
+}
 
 module.exports = {
     addData: addData,
     readDataP: readDataP,
     readDataM: readDataM,
+    RmData: RmData,
 
 
 }

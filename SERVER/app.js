@@ -8,25 +8,33 @@ var cors = require('cors')
 const getRoute = require('./routes/get')
 const postRoute = require('./routes/post')
 const fs = require('fs-extra')
-
+var moment = require("moment")
 app.use(cors())
-
+moment.locale('fr');
 
 app.use('/get', getRoute);
 
 let prof = [];
 let menu = [];
 
+const date = moment().format('L');
+console.log(date)
+
 app.post('/presence', (req, res) => {
     console.log('Got body:', req.body);
     prof.push(req.body)
+
+
+
     db.addData(req.body)
     console.log(prof)
 
 
 });
 
-
+app.delete('/presence', function (req, res) {
+    res.send('Got a DELETE request at /user')
+})
 
 
 
