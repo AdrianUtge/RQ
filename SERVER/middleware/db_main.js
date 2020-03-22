@@ -72,7 +72,7 @@ function addData(data) {
 // }
 
 
-
+const id = "5e75fecb2c1e7d977d55b892";
 
 
 
@@ -86,7 +86,7 @@ function readDataP() {
             return
         }
         const db = client.db(dbName);
-        db.collection('Presence').find({}, { projection: { _id: 1, data: 1, jour: date } }).toArray(function (err, result) {
+        db.collection('Presence').find({}, { projection: { _id: id, data: 1, "jour": date } }).toArray(function (err, result) {
             if (err) throw err;
             console.log(result);
             fs.writeJson('./P.json', result);

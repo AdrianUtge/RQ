@@ -44,9 +44,10 @@ app.post('/menu', (req, res) => {
 
     //  db.addData(req.body)
     console.log(menu)
-
+    res.send('http://localhost:3000/get/datain')
 
 });
+
 
 
 

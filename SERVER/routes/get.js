@@ -50,6 +50,9 @@ router.get('/menu', function (req, res) {
 })
 
 
+router.get('/presence', function (req, res) {
+    res.send('data ajouté vous pouvez aller en arrière')
+})
 
 module.exports = router;
 
