@@ -23,9 +23,9 @@ function OI(data) {
 
 
     const db = client.db(dbName);
-    let caca = { data, "jour": date, };
-    console.log(caca);
-    db.collection('Presence').insertOne(caca, function (err, r) {
+    let alpha = { data, "jour": date, };
+    console.log(alpha);
+    db.collection('Presence').insertOne(alpha, function (err, r) {
         assert.equal(null, err);
         assert.equal(1, r.insertedCount);
 
